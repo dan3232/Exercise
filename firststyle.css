@@ -1,17 +1,31 @@
+html {
+    font-size: .9rem;
+}
+
+@media (min-width: 600px) {
+    html {
+        font-size: 1.3125rem;
+    }
+}
+
 body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 21px;
     margin:0;
 }
 
 .container {
     margin: 0 auto;
-    width: 570px;
+    max-width: 570px;
+    height: 100%;
+    padding: 0 2em;
 }
 
 img {
     border-radius: 50%;
+    max-width: 90%;
+    max-height: 90%;
+    /* border: 10px solid white; */
 }
 
 h1,
@@ -21,23 +35,23 @@ h2 {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 3.5rem;
 }
 
 h2 {
-    font-size: 42px;
+    font-size: 2.8rem;
     border-bottom: 1px solid #c4c4c4;
     border-top: 1px solid #c4c4c4;
-    padding: 20px 0;
+    padding: .5em 0;
 }
 
 h3 {
-    font-size: 36px;
+    font-size: 2.25rem;
     margin-bottom: 0;
 }
 
 .data {
-    font-size: 16px;
+    font-size: 1rem;
     margin-top: 0;
 }
 
@@ -53,11 +67,11 @@ a:focus {
 
 
 h1 .bold-text {
-    font-size: 80px;
+    font-size: 5rem;
 }
 
 h2 .bold-text {
-    font-size: 60px;
+    font-size: 3.6rem;
 }
 
 .invert {
@@ -67,7 +81,16 @@ h2 .bold-text {
 
 header,
 section {
-    padding: 100px 0;
+    padding: 6.25em 0;
+}
+
+header.invert {
+    padding: 0;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .btns {
@@ -75,8 +98,8 @@ section {
     background-color: #99d930;
     border: none;
     font-weight: 900;
-    padding: 10px 25px;
-    font-size: 21px;
+    padding: .625em 1.25em;
+    font-size: 1.2rem;
     margin-bottom: 0;
     text-decoration: none;
     display: inline-block;
@@ -98,3 +121,48 @@ section {
     color: #99d930;
     font-weight: 900;
 }
+
+@media (min-width: 775px) {
+        .splitter {
+            display: flex;
+            flex-direction: row;
+        }
+    
+        section {
+            width: 50%;
+        }
+    
+        .article {
+            background-color: #99d930;
+            color: #252525;
+        }
+
+        .article .green-text,
+        .article a {
+            color: #252525;
+        }
+
+        .article.invert h2 {
+            border-color:#252525;
+        }
+
+        .article.invert a,
+        .article.invert time {
+            color: currentColor;
+        }
+
+        .article.invert a:hover {
+            color: #fff;
+        }
+
+        .article.invert .btn-two {
+            background-color: #252525;
+            color: #fff;
+        }
+
+        .article.invert .btn-two:hover {
+            color: black;
+            background-color: #fff;
+        }
+
+    }
